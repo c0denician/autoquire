@@ -1,0 +1,17 @@
+#
+# SPARK CUSTOM C2 IOCs
+#
+# Important: Rename this template file from .txt.template to .txt 
+#
+# FORMAT -----------------------------------------------------------------------
+#
+# # Comment
+# IP
+# FQDN
+#
+# EXAMPLES ---------------------------------------------------------------------
+#
+# # Case 44 C2 Server
+# mastermind.eu
+# googleaccountservices.com
+# 89.22.123.12

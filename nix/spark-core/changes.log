@@ -1,0 +1,620 @@
+THOR/SPARK APT Scanner Changes
+
+Spark Version 1.16.5
+=====================
+- Change: New software signature on executables 77:BD:BF:82:BA:D5:BB:AE:39:7A:D4:C0:99:CB:20:C4
+- Bugfix: Improved criteria for dump scan targets
+
+Spark Version 1.16.4
+=====================
+- Signatures: THOR Signatures, public signature-base and sigma update
+- Change: Upgraded THOR-Util
+
+Spark Version 1.16.3
+=====================
+- Change: Revised licenses in docs/ folder
+- Bugfix: Fixed missing signature revisions in title (in SPARK for Windows)
+
+Spark Version 1.16.2
+=====================
+- Signatures: THOR Signatures, public signature-base and sigma update
+- Feature: Trusted hashes
+- Change: Upgraded THOR-Util
+- Change: Renamed flag '--nodeepscan' to '--nodeepdive'
+- Bugfix: Improved differentiation between deep scan and dump scan
+- Bugfix: Fixed skipped YARA scan on some files
+
+Spark Version 1.16.1
+=====================
+- Signatures: THOR Signatures and public signature-base update
+- Change: Upgraded THOR-Util
+- Change: Added more information to SPARK's title
+- Change: Updated dependencies
+- Change: Improved logging
+
+Spark Version 1.16.0
+=====================
+- Signatures: THOR Signatures update
+- Change: Write error messages to stderr instead of stdout
+- Change: Improved exit codes (e.g. '7 = No valid license found')
+- Change: Added new help section for ressource control
+- Bugfix: Allow multiple SPARK instances if SPARK runs with '--fsonly'
+
+Spark Version 1.15.18
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+- Feature: Check admin rights of current user
+- Feature: '--verylowprio' flag to set process priority to lowest level
+- Bugfix: Fixed a bug in setting process priority
+
+Spark Version 1.15.17
+=====================
+- Signature: THOR Signatures and public sigma update
+- Change: Updated SPARK Manual
+- Bugfix: Fixed a bug in custom YARA rule compilation
+
+Spark Version 1.15.16
+=====================
+- Change: Added flag '--encrypt' to encrypt log- and csv-file. If '--pubkey' is not provided, a default key will be used
+- Change: Combined flags '--publickey' and '--publickeyfile' to one flag '--pubkey'
+- Change: Upgraded THOR-Util
+
+Spark Version 1.15.15
+=====================
+- Feature: Added '--publickeyfile' command
+- Change: Upgraded THOR-Util (added 'decrypt' command)
+- Bugfix: Improved RSA encryption
+
+Spark Version 1.15.14
+=====================
+- Feature: SPARK checks if another SPARK is already running (use '--nodoublecheck' to prevent this)
+- Feature: RSA encryption for log- and csv-file (use '--publickey="..."' to use the encryption feature)
+- Feature: '--cmdlog' flag to use log-file output's format for commandline output
+- Change: Improved help section
+- Bugfix: Fixed a bug with false positive filename iocs
+- Bugfix: Improved keyboard interrupt handling
+- Bugfix: Fixed character encoding
+
+Spark Version 1.15.13
+=====================
+- Bugfix: Improved compilation of custom yara rules
+
+Spark Version 1.15.12
+=====================
+- Signature: THOR Signatures and public sigma update
+- Bugfix: Fixed regular expression for directory exclusions
+
+Spark Version 1.15.11
+=====================
+- Feature: Eventlog Mode (e.g. '-n Security' to scan the Security channel)
+- Feature: Resource Control for Syslog (set 'syslog-max-bytes=N' to limit the bytes sent via Syslog)
+- Change: Improved help
+- Change: Updated skip lists
+- Bugfix: Fixed a bug in YARA initialization
+- Bugfix: Fixed a bug in DeepDive with UNC paths
+
+Spark Version 1.15.10
+=====================
+- Signature: public signature-base and sigma update
+- Change: no lower process priority by default, use --lowprio or --soft instead
+- Bugfix: performance optimation
+
+Spark Version 1.15.9
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+- Feature: '--noyara' flag for skipping yara initialization and checks
+- Bugfix: Fixed scoring bug
+
+Spark Version 1.15.8
+=====================
+- Signature: THOR Signatures update
+- Bugfix: performance optimation
+
+Spark Version 1.15.7
+=====================
+- Bugfix: performance optimation
+
+Spark Version 1.15.6
+=====================
+- Feature: Automatically go into soft mode, if total memory < 512 MB, use '--nosoft' to prevent this
+- Change: Added aliases for modules to be more error-tolerant
+- Change: Made registry walk a feature. Use '-a Registry --noregwalk' to only scan specific registry locations
+- Bugfix: Improved license checks relevant to feature restrictions
+
+Spark Version 1.15.5
+=====================
+- Signature: sigma update
+
+Spark Version 1.15.4
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+- Feature: Lab scanning mode '--fsonly'
+- Change: Improved filesystem scan
+
+Spark Version 1.15.3
+=====================
+- Bugfix: Memory and performance optimation
+
+Spark Version 1.15.2
+=====================
+- Change: Improved soft mode
+- Change: Improved debugging
+
+Spark Version 1.15.1
+=====================
+- Feature: Added '--keyval' flag to format file output to key='value'
+- Feature: Added ':SYSLOGKV' flag to syslog server format
+- Feature: CSV output of relevant files (md5, filepath and score)
+- Change: Improved priority of SPARK process
+- Bugfix: Fixed output format of Windows product name
+
+Spark Version 1.15.0
+=====================
+- Feature: Resource Control - Exit if available memory is lower than threshold
+- Feature: Soft Mode - Leave off resource-intensive modules and features
+- Feature: Silent Mode - Do not print anything to command line
+- Feature: Separate flags into sections
+- Change: Improved --brd flag
+- Change: Print Windows product name at the beginning
+- Change: Disabled deep scan by default, use --intense or --deepscan instead
+- Change: Print active features at the beginning
+
+Spark Version 1.14.18
+=====================
+- Bugfix: Enable Bifrost client by default
+
+Spark Version 1.14.17
+=====================
+- Bugfix: Fixed a bug causing SPARK scanning other SPARK logs
+
+Spark Version 1.14.16
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+- Feature: Send files to a Bifrost Quarantine server (ASGARD, Python script) 
+- Change: Added support for uncompiled .yas files
+
+Spark Version 1.14.15
+=====================
+- Bugfix: Fixed winnti rootkit check
+- Change: Upgraded thor-util (new flag '--http-insecure')
+
+Spark Version 1.14.14
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+- Feature: Check for rootkit indicators
+- Change: Upgraded thor-util (new command 'encrypt')
+- Change: Updated SPARK Manual
+
+Spark Version 1.14.13
+=====================
+- Signature: THOR Signatures, public signature-base and sigma update
+
+Spark Version 1.14.12
+=====================
+- Bugfix: Many Notice messages for suspicious eventlog entries that should only be analyzed for statistical reasons
+
+Spark Version 1.14.11
+=====================
+- Signature: signature-sources and sigma update
+- Bugfix: Fixed a sigma bug
+
+Spark Version 1.14.10
+=====================
+- Signature: sigma update
+- Bugfix: Fixed a bug in event id check
+
+Spark Version 1.14.9
+=====================
+- Signature: signature-sources and sigma update
+- Bugfix: Fixed a bug in keyword ioc parsing
+- Bugfix: Fixed a bug in filename ioc parsing
+- Change: Disabled Sigma by default, use '--sigma' to enable Sigma
+- Feature: Print additional os information on start (Linux and macOS)
+
+Spark Version 1.14.8
+=====================
+- Signature: signature-sources, signature-base and sigma update
+
+Spark Version 1.14.7
+=====================
+- Feature: Added 'config/spark.cfg' for basic configuration
+- Change: Use FQDN instead of hostname in SPARK events
+- Bugfix: Wordings in Windows EventLog Scan
+
+Spark Version 1.14.6
+=====================
+- Change: Improved error messages for log scan
+- Change: Improved output of YARA matches
+- Change: Added max logline limit for log scan
+
+Spark Version 1.14.5
+=====================
+- Signature: THOR Signature Revision 20180629
+- Signature: Sigma Signature Revision 20180630
+- Feature: Sigma Scan on Logfiles
+
+Spark Version 1.14.4
+=====================
+- Signature: THOR Signature Revision 20180627
+- Feature: Added --nosigma flag to disable sigma scanning
+- Change: Added YARA and IOC scans to Eventlog scan
+
+Spark Version 1.14.3
+=====================
+- Signature: Sigma Signature Revision 20180628
+- Change: Improved Windows EventLog Scan
+
+Spark Version 1.14.2
+=====================
+- Signature: Sigma Signature Revision 20180627
+- Change: Improved Windows EventLog Scan
+
+Spark Version 1.14.1
+=====================
+- Signature: Sigma Signature Revision 20180627
+- Signature: LOKI Signature Revision 20180627 (for SPARK Core)
+- Change: Improved Windows EventLog Scan
+
+Spark Version 1.14.0
+=====================
+- Signature: Sigma Signature Revision 20180625
+- Feature: Windows EventLog Scan with Sigma Rules
+
+Spark Version 1.13.1
+=====================
+- Bugfix: Skipping /dev on macOS 
+- Change: Several package upgrades
+
+Spark Version 1.13.0
+=====================
+- Feature: thor-util / spark-util HTML report generation from text log files (single / multi)
+- Signature: THOR Signature Revision 20180620 (for SPARK)
+- Signature: LOKI Signature Revision 20180620 (for SPARK Core)
+
+Spark Version 1.12.4
+=====================
+- Bugfix: Removed skip of old HFS+ file system type (.DMG) by default on macOS
+
+Spark Version 1.12.3
+=====================
+- Bugfix: Multiple smaller bug fixes 
+- Change: Registry scan with exclusions by default, all keys in --intense scan mode
+- Signature: THOR Signature Revision 20180613 (for SPARK)
+
+Spark Version 1.12.2
+=====================
+- Feature: Skip own SPARK / THOR log files on File- and LogScan
+- Change: Updated SPARK Manual
+- Bugfix: Fixed bug in filename IOCs check
+
+Spark Version 1.12.1
+=====================
+- Signature: THOR Signature Revision 20180611 (for SPARK)
+- Signature: LOKI Signature Revision 20180610 (for SPARK Core)
+- Bugfix: Fixed rulehub initialization for memory scan
+
+Spark Version 1.12.0
+=====================
+- Feature: Seperated default rule set from process memory rule sets (require 'process' keyword in filename to be applied to process memory > mitigates process memory scanning issues on Win 10 / 2016)
+
+Spark Version 1.11.21
+=====================
+- Bugfix: Filename IOC match, matched keyword field is empty
+- Bugfix: Field order for REASONs mixed up
+- Bugfix: 3rd generation filename IOC, false positive regex application failed on Linux/MacOS
+
+Spark Version 1.11.20
+=====================
+- Signature: signature-base update (SPARK Core)
+- Change: EULA update (SPARK Core)
+
+Spark Version 1.11.19
+=====================
+- Signature: THOR Signature Revision 20180606 (for SPARK)
+- Bugfix: Extended list of FS types to skip 
+
+Spark Version 1.11.18
+=====================
+- Signature: THOR Signature Revision 20180606 (for SPARK)
+- Bugfix: Fixed legacy syslog output format
+
+Spark Version 1.11.17
+=====================
+- Change: Print scanned root paths before FileScan starts
+- Change: Print '--alldrives' information if root path will be skipped
+- Change: Decreased YARA timeout for process memory scan (from 1m to 25s)
+- Change: Print process memory scan information in predefined order
+- Bugfix: Fixed YARA variables for process memory scan
+
+Spark Version 1.11.16
+=====================
+- Feature: Added flag '--rfc'
+
+Spark Version 1.11.15
+=====================
+- Change: Updated SPARK Manual
+- Change: Updated SPARK Core EULA
+- Bugfix: Wordings
+
+Spark Version 1.11.14
+=====================
+- Signature: THOR Signature Revision 20180603 (for SPARK)
+- Signature: LOKI Signature Revision 20180603 (for SPARK Core)
+- Change: Print active modules after license parsing
+- Bugfix: Fixed panic on wrong syslog target
+- Bugfix: Removed empty logline
+
+Spark Version 1.11.13
+=====================
+- Bugfix: Fixed output in THOR Util signature verification
+
+Spark Version 1.11.12
+=====================
+- Change: Added templates for custom signatures
+- Change: Updated SPARK Manual
+- Change: Added EULA for SPARK Core
+
+Spark Version 1.11.11
+=====================
+- Signature: LOKI Signature Revision 20180601 (for SPARK Core)
+- Change: Cosmetics in SPARK Core Util
+
+Spark Version 1.11.10
+=====================
+- Bugfix: Fixed guess if no product type is provided in THOR Util and SPARK Core Util
+- Bugfix: Fixed wrong upgrade URL in SPARK Core Util
+- Bugfix: Fixed version parse of SPARK Core in SPARK Core Util
+
+Spark Version 1.11.9
+=====================
+- Bugfix: Removed license validation check for SPARK Core Util
+
+Spark Version 1.11.8
+=====================
+- Signature: THOR Signature Revision 20180530 (for SPARK)
+- Signature: LOKI Signature Revision 20180529 (for SPARK Core)
+- Feature: Added spark-core-util to SPARK Core package
+
+Spark Version 1.11.7
+=====================
+- Change: Added '--version' command to THOR Util
+
+Spark Version 1.11.6
+=====================
+- Bugfix: Fixed SHIMCache scan if too many shim cache entries where found
+- Change: Print file timestamps in UTC time instead of local time
+
+Spark Version 1.11.5
+=====================
+- Signature: LOKI Signature Revision 20180524 (for SPARK Core)
+- Bugfix: Fixed the alert, warning and error counter in the Report logline
+- Change: Wordings in THOR Util
+
+Spark Version 1.11.4
+=====================
+- Change: Added Windows 10 support for SHIMCache scan
+- Change: All signature-base yara rules are compiled into one big ruleset
+- Change: Improved usability for THOR Util
+- Feature: Added '--insecure' flag for THOR Util
+- Feature: Added '--printshim' to print all SHIM cache entries as info
+
+Spark Version 1.11.3
+=====================
+- Bugfix: Fixed output of license starts- and expires date
+- Feature: Added command 'verify' to THOR Util for binary signatures verification
+- Change: Added new update server to THOR Util
+
+Spark Version 1.11.2
+=====================
+- Signature: THOR Signature Revision 20180519 (for SPARK)
+- Signature: LOKI Signature Revision 20180520 (for SPARK Core)
+- Bugfix: Fixed the alert, warning and error counter in the Report logline
+- Change: Added default modules and features (for SPARK Core)
+- Feature: Added urls for issue reporting and false positive reporting (for SPARK Core)
+
+Spark Version 1.11.1
+=====================
+- Bugfix: Fixed a skip filter
+- Bugfix: Abort deep dive on empty files
+
+Spark Version 1.11.0
+=====================
+- Signature: THOR Signature Revision 20180509 (for SPARK)
+- Signature: LOKI Signature Revision 20180508 (for SPARK Core)
+- Feature: New scanner 'SPARK Core'
+- Feature: Added syslog format ':JSON' and ':SYSLOGJSON'
+- Feature: License format now supports a start date
+- Change: Improved output in deep dive mode
+- Change: Renamed flag '--json' to '--json-file'
+- Change: Signed binaries that will be checked by THOR Util
+- Change: Added more skip filters for file- and processscan
+
+Spark Version 1.10.2
+=====================
+- Change: Deep dive scan MDMP files
+
+Spark Version 1.10.1
+=====================
+- Signature: THOR Signature Revision 20180506
+- Feature: Added module 'DeepDive'
+- Change: Improved skip behaviour on macOS by checking magic headers
+- Change: Skip .dmg files and ssh mounts on macOS as long as '--alldrives' is not set
+
+Spark Version 1.10.0
+=====================
+- Signature: THOR Signature Revision 20180501
+- Feature: Syslog output supports tcp and tls
+- Feature: FileScan prints file permissions on unix systems
+- Feature: -j <hostname> parameter to overwrite the hostname of log outout
+- Feature: Print yara rule names in modules: ProcessScan, FileScan and RegistryScan
+- Feature: -i <case-id> parameter to add a case id to each log output line
+- Feature: Added JSON output support (parameter: --json)
+- Feature: Added module 'Autoruns'
+- Feature: -e <days> parameter to look back in days (Only scan .log files that were modified after 'days' days)
+- Change: RegistryScan skips some registry keys due to performance issues
+- Change: Skip /Volumes/MobileBackups on macOS
+- Change: Skip /Volumes on macOS as long as parameter '--alldrives' is not set
+
+Spark Version 1.9.3
+=====================
+- Signature: THOR Signature Revision 20180403
+
+Spark Version 1.9.2
+=====================
+- Change: Log file output changed from 'append' to 'write' mode
+- Change: LogScan shows file size on startup
+
+Spark Version 1.9.1
+=====================
+- Change: LogScan only on files that are smaller than max file size
+- Signature: THOR Signature Revision 20180327
+
+Spark Version 1.9.0
+=====================
+- Change: go-yara from 1.0.4 to 1.0.7, OpenSSL upgrade, musl upgrade 
+
+Spark Version 1.8.17
+=====================
+- Feature: thor-util allows OSX version downloads/upgrades
+
+Spark Version 1.8.16
+=====================
+- Signature: THOR Signature Revision 20180301
+
+Spark Version 1.8.15
+=====================
+- Signature: THOR Signature Revision 20180225
+- Bugfix: --alldrives actually scans all network drives (still excludes all pseudo file systems)
+
+Spark Version 1.8.14
+=====================
+- Feature: Skips GPFS file systems
+- Signature: THOR Signature Revision 20180221
+
+Spark Version 1.8.13
+=====================
+- Bugfix: Minor fixes in description texts of the help
+
+Spark Version 1.8.12
+=====================
+- Change: Refactored module use
+- Bugfix: Non-working --noreg parameter
+
+Spark Version 1.8.11
+=====================
+- False Positives: Process memory excludes for secsvcs
+
+Spark Version 1.8.10
+=====================
+- Feature: New '-printall' switch to print all scanned files (for debugging purposes)
+
+Spark Version 1.8.9
+=====================
+- Feature: -noreg parameter to skip registry scanning on Windows
+- Change: Improved -s description in command line help
+- Change: Manual update
+- Signature: THOR Signature Revision 20180205
+
+Spark Version 1.8.8
+=====================
+- Change: Allow Registry module deactivation with -noreg
+- Change: Improved -s parameter help 
+- Change: New manual
+
+Spark Version 1.8.7
+=====================
+- Signature: Signature revision 11.01.2018
+- Change: EULA update
+- Bugfix: Minor code fixes
+
+Spark Version 1.8.6
+=====================
+- Change: Case-insensitive regex matches on directory excludes
+- Change: Manual update
+- Change: Allow server licenses on workstations
+
+Spark Version 1.8.5
+=====================
+- Change: Changes to registry walk checks
+
+Spark Version 1.8.4
+=====================
+- Bugfix: flag --nolog does not log to file anymore
+
+Spark Version 1.8.3
+=====================
+- False Positive: Reduction of false positives caused by improved process in-memory scanning
+
+Spark Version 1.8.2
+=====================
+- Bugfix: Faulty truncate on decrypted signature files led to trailing binary 0s
+- Bugfix: Removed some debug output
+- Change: Improved ProcessCheck log lines on Windows machines
+
+Spark Version 1.8.1
+=====================
+- Bugfix: Missing ./conf/directory-excludes.cfg
+
+Spark Version 1.8.0
+=====================
+- Feature: New options --allhds and -alldrives for SPARK on Windows
+- Feature: Support for custom file and directory excludes
+
+Spark Version 1.7.0
+=====================
+- Feature: Support for new custom signature encryption format (generated with thor-cipher.py)
+
+Spark Version 1.6.0
+=====================
+- Feature: YARA rule initialization based on the YARA rule type (default, log, registry, keyword)
+
+Spark Version 1.5.1
+=====================
+- Rebuild signatures
+
+Spark Version 1.5.0
+=====================
+- Feature: Print matched strings of YARA rules
+- Change: Sorted and limited reasons, new parameter --allreasons to show more than the top 2
+- Bugfix: Better FIRST_BYTES output
+- Update YARA version
+- Update thor-util
+
+Spark Version 1.4.1
+=====================
+- Build statically linked thor-util on Linux
+
+Spark Version 1.4.0
+=====================
+- Feature: Remove personal information with parameter --brd
+- Bugfix: Firstbytes output in text log contained non-printable characters
+- Change: Changed order of last log lines (Result notice / Scan completed)
+- Only ship 32-bit thor-util
+- Replace shell-based compatibility wrapper
+- Update thor-util
+
+Spark Version 1.3.8
+=====================
+- Select modules with '-a' parameter
+- Default log file name changed to THOR's format: hostname_spark_year-month-day.txt
+
+Spark Version 1.3.7
+=====================
+- OS dependant quick scan directories and checks
+- Hostname in scan start notice message
+- Rename binaries
+- Add thor-util
+
+Spark Version 1.3.6
+=====================
+- Fix license handling
+- Log license info at INFO level
+
+Spark Version 1.3.5
+=====================
+- Fix license handling
+
+Spark Version 1.3.4
+=====================
+- First public version
+
